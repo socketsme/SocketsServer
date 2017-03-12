@@ -39,7 +39,7 @@ public class EchoThread extends Thread {
 			inp = socket.getInputStream();
 			out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8), true);
 			brinp =new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
-			out.write("Hola 2.01\r\n");
+			out.write("SocketsMe Server Version: 2.01\r\n");
 			out.flush();
 			key=socket.getInetAddress().toString();
 		} catch (IOException e) {
